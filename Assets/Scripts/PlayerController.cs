@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
     private float movementY;
+    private int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +36,16 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
         rb.AddForce(movement * speed);
+    }
+
+    // Increment the value of score when the Player touches an object tagged Pickup
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            score += 1;
+            Debug.Log($"Score: {score}");
+            other.gameObject.SetActive(false);
+        }
     }
 }
