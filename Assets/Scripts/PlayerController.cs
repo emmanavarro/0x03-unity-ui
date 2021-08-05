@@ -35,7 +35,12 @@ public class PlayerController : MonoBehaviour
     // It is called just before performing any physics calculations
     void FixedUpdate()
     {
+        //Store user input as a movement vector
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+
+        //Apply the movement vector to the current position, which is
+        //multiplied by deltaTime and speed for a smooth MovePosition
+        // rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
 
         rb.AddForce(movement * speed);
     }
