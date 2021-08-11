@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
             winLoseText.text = "You Win!";
             winLoseBG.color =  Color.green;
             winLoseBG.gameObject.SetActive(true);
+            StartCoroutine(LoadScene(2)); // the scene waits 2 seconds to reload
         }
     }
 
@@ -82,7 +84,7 @@ public class PlayerController : MonoBehaviour
             winLoseText.text = "Game Over!";
             winLoseBG.color =  Color.red;
             winLoseBG.gameObject.SetActive(true);
-            SceneManager.LoadScene("maze");
+            StartCoroutine(LoadScene(2));
         }
     }
 
@@ -94,5 +96,11 @@ public class PlayerController : MonoBehaviour
     void SetHealthText()
     {
         healthText.text = $"Health: {health.ToString()}";
+    }
+
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("maze");
     }
 }
