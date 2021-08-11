@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 30f;
     public int health = 5;
     public Text scoreText;
+    public Text healthText;
 
     private Rigidbody rb;
     private float movementX;
@@ -57,7 +58,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Trap"))
         {
             health -= 1;
-            Debug.Log($"Health: {health}");
+            // Debug.Log($"Health: {health}");
+            SetHealthText();
         }
         if (other.gameObject.CompareTag("Goal"))
         {
@@ -77,5 +79,10 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = $"Score: {score.ToString()}";
+    }
+
+    void SetHealthText()
+    {
+        healthText.text = $"Health: {health.ToString()}";
     }
 }
