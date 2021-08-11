@@ -77,7 +77,11 @@ public class PlayerController : MonoBehaviour
     {
         if (health == 0)
         {
-            Debug.Log("Game Over!");
+            // Debug.Log("Game Over!");
+            winLoseText.color = Color.white;
+            winLoseText.text = "Game Over!";
+            winLoseBG.color =  Color.red;
+            winLoseBG.gameObject.SetActive(true);
             SceneManager.LoadScene("maze");
         }
     }
