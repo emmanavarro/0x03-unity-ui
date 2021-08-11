@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 30f;
     public int health = 5;
+    public Text scoreText;
 
     private Rigidbody rb;
     private float movementX;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             score += 1;
-            Debug.Log($"Score: {score}");
+            SetScoreText();
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.CompareTag("Trap"))
@@ -72,5 +72,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             SceneManager.LoadScene("maze");
         }
+    }
+
+    void SetScoreText()
+    {
+        scoreText.text = $"Score: {score.ToString()}";
     }
 }
