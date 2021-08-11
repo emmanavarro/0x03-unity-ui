@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
@@ -5029,10 +5029,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674b87cb6bebcee45bca22c22a3d57dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 30
   health: 5
   scoreText: {fileID: 768202439}
   healthText: {fileID: 1079023233}
+  winLoseText: {fileID: 438252313}
+  winLoseBG: {fileID: 2106312783}
 --- !u!114 &1418663327
 MonoBehaviour:
   m_ObjectHideFlags: 0

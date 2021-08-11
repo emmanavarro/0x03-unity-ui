@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public int health = 5;
     public Text scoreText;
     public Text healthText;
+    public Text winLoseText;
+    public Image winLoseBG;
 
     private Rigidbody rb;
     private float movementX;
@@ -63,7 +65,11 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Goal"))
         {
-            Debug.Log("You win!");
+            // Debug.Log("You win!");
+            winLoseText.color = Color.black;
+            winLoseText.text = "You Win!";
+            winLoseBG.color =  Color.green;
+            winLoseBG.gameObject.SetActive(true);
         }
     }
 
