@@ -1,31 +1,33 @@
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png)
 
-# 0x02. Unity - Scripting
-
-## Check it out 👾
-
-This project is about building components for a maze, adding new GameObjects and scripts to make a playable game. If you want to see the result and play, go to https://emmanavarro.github.io/0x02-unity-scripting/ have fun!
+# 0x03-unity-ui
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 ## General
-* What are scripts in Unity and how are they created and used
-* How to control GameObjects with scripts
-* What is an event function and how are the most common ones used
-* How to create and destroy GameObjects within scripts
-* How to use namespaces to organize classes
-* What are attributes and how to use them
-* How to use Debug.Log()
-* What is a vector
+
+    * What is the Canvas
+    * What is screen space vs world space
+    * How to use the Rect Tool
+    * What are anchors and how to use them
+    * How to display and update information in the UI
+    * What is a coroutine
+    * How to create a menu
+    * How to use Unity’s UI Interaction Components
+    * What the alpha value of a color is
+    * How to set and change material colors with scripts
+    * What are common accessibility concepts to consider
+
 
 ## Requirements
 
 ### General
-* A README.md file, at the root of the folder of the project
-* Use Unity’s default .gitignore in your project folder
-* Push the entire repo 0x02-unity-scripting, including .meta files
-* Scenes and project assets such as Materials must be named and organized as described in the tasks
+    * A README.md file, at the root of the folder of the project
+    * Use Unity’s default .gitignore in your project folder
+    * Scenes and project assets such as Materials must be named and organized as described in the tasks
+    * In your scripts, all your public classes and their members should have XML documentation tags
+    * In your scripts, all your private classes and members should be documented but without XML documentation tags
 
 ### Let's talk 💬
 
