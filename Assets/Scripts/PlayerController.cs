@@ -86,6 +86,11 @@ public class PlayerController : MonoBehaviour
             winLoseBG.gameObject.SetActive(true);
             StartCoroutine(LoadScene(2));
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);      // Load the main menu
+        }
     }
 
     void SetScoreText()
