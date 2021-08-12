@@ -2,6 +2,10 @@
 
 # 0x03-unity-ui
 
+## Check it out 👾
+
+This project is about building components for a maze, adding new GameObjects and scripts to make a playable game. If you want to see the result and play, go to https://emmanavarro.github.io/0x03-unity-ui/ have fun!
+
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
